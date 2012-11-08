@@ -29,7 +29,7 @@
     bannerView = [[ADBannerView alloc]init];
     bannerView.delegate=self;
     [bannerView setHidden:YES];
-    [self.view addSubview:bannerView];
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -64,7 +64,7 @@
     CGRect contentFrame = self.view.bounds;
     CGRect bannerFrame = bannerView.frame;
     if (bannerView.bannerLoaded) {
-        contentFrame.size.height -= bannerView.frame.size.height;
+        contentFrame.size.height -= bannerView.frame.size.height+56;
         bannerFrame.origin.y = contentFrame.size.height;
     } else {
         bannerFrame.origin.y = contentFrame.size.height;
@@ -80,24 +80,15 @@
 }
 
 -(void)addAdMobBanner{
-    if ([AppDelegate isRunningOniPad]) {
-        gAdBannerView= [[GADBannerView alloc]
-                        initWithFrame:CGRectMake(0.0,
-                                                 self.view.frame.size.height -
-                                                 GAD_SIZE_728x90.height,
-                                                 768,
-                                                 GAD_SIZE_728x90.height)];
-        gAdBannerView.adUnitID = @"a14fb75ebdbb8a1";
-    }else {
-        gAdBannerView= [[GADBannerView alloc]
-                        initWithFrame:CGRectMake(0.0,
-                                                 self.view.frame.size.height -
-                                                 GAD_SIZE_320x50.height,
-                                                 GAD_SIZE_320x50.width,
-                                                 GAD_SIZE_320x50.height)];
 
-        gAdBannerView.adUnitID = @"a14fb75d91ceb9f";
-    }
+    gAdBannerView= [[GADBannerView alloc]
+                    initWithFrame:CGRectMake(0.0,
+                                             self.view.frame.size.height -
+                                             GAD_SIZE_320x50.height-56,
+                                             GAD_SIZE_320x50.width,
+                                             GAD_SIZE_320x50.height)];
+
+    gAdBannerView.adUnitID = @"a14fe1875eb5628";
     
     // 告知运行时文件，在将用户转至广告的展示位置之后恢复哪个 UIViewController 
     // 并将其添加至视图层级结构。

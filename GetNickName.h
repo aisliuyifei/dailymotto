@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface GetNickName : NSObject
-
+#import "WBEngine.h"
+@interface GetNickName : NSObject<WBEngineDelegate>
+{
+    NSString *nickName;
+}
+@property (nonatomic,retain)NSString * nickName;
 @end
+
+@protocol NickNameDelegate <NSObject>
+    - (void)nickNameGot:(GetNickName *)getNickName;
+@end
+

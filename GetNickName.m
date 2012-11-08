@@ -9,5 +9,27 @@
 #import "GetNickName.h"
 
 @implementation GetNickName
+@synthesize nickName;
+
+
++(id) init{
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
+
+#pragma mark - WBEngineDelegate Methods
+
+- (void)engine:(WBEngine *)engine requestDidSucceedWithResult:(id)result
+{
+    
+}
+
+- (void)engine:(WBEngine *)engine requestDidFailWithError:(NSError *)error
+{
+
+}
 
 @end

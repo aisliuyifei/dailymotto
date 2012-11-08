@@ -17,7 +17,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-
+#import "GetNickName.h"
 #import "WBEngine.h"
 
 @class WBSendView;
@@ -40,7 +40,7 @@
 @end
 
 
-@interface WBSendView : UIView <UITextViewDelegate, WBEngineDelegate> 
+@interface WBSendView : UIView <UITextViewDelegate, WBEngineDelegate,NickNameDelegate> 
 {
     
     UITextView  *contentTextView;
@@ -50,6 +50,8 @@
     UIButton    *closeButton;
     UIButton    *clearTextButton;
     UIButton    *clearImageButton;
+    UIButton    *logoutButton; //added by myself
+    UILabel     *labelUserName;//added by myself
     
     UILabel     *titleLabel;
     UILabel     *wordCountLabel;
@@ -65,6 +67,8 @@
     BOOL        isKeyboardShowing;
     
     WBEngine    *engine;
+//    WBEngine    *engine2;//added by myself
+
     
     id<WBSendViewDelegate> delegate;
 }

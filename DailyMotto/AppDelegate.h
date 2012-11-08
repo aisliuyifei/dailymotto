@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ECPurchase.h"
+@class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) ViewController *viewController;
+
+-(NSString*)dbPath;
 @end

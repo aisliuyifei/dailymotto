@@ -16,6 +16,7 @@
 //
 
 #import "WBSendView.h"
+#import "GetNickName.h"
 
 static BOOL WBIsDeviceIPad()
 {
@@ -71,6 +72,17 @@ static BOOL WBIsDeviceIPad()
         engine = [[WBEngine alloc] initWithAppKey:appKey appSecret:appSecret];
         [engine setDelegate:self];
         
+//        engine2 = [[WBEngine alloc] initWithAppKey:appKey appSecret:appSecret];
+//        
+//        GetNickName * getNickName = [[GetNickName alloc] init];
+//        [engine2 setDelegate: getNickName];
+        
+//        [engine2 loadRequestWithMethodName:@"statuses/home_timeline.json"
+//                               httpMethod:@"GET"
+//                                   params:nil
+//                             postDataType:kWBRequestPostDataTypeNone
+//                         httpHeaderFields:nil];
+        
         // background settings
         [self setBackgroundColor:[UIColor clearColor]];
         [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
@@ -104,6 +116,27 @@ static BOOL WBIsDeviceIPad()
 		[titleLabel setShadowColor:[UIColor whiteColor]];
         [titleLabel setFont:[UIFont systemFontOfSize:19]];
 		[panelView addSubview:titleLabel];
+        
+        logoutButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [logoutButton setShowsTouchWhenHighlighted:YES];
+        [logoutButton setFrame:CGRectMake(14, 270, 48, 30)];
+        [logoutButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [logoutButton setBackgroundImage:[UIImage imageNamed:@"btn.png"] forState:UIControlStateNormal];
+		[logoutButton setTitle: NSLocalizedString(@"注销", nil) forState:UIControlStateNormal];
+		[logoutButton.titleLabel setFont:[UIFont boldSystemFontOfSize:13.0f]];
+		[logoutButton addTarget:self action:@selector(onLogoutButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+		[panelView addSubview:logoutButton];
+
+        labelUserName = [[UILabel alloc] initWithFrame:CGRectMake(14, 230, 140, 30)];
+        [labelUserName setText:NSLocalizedString(@"", nil)];
+        [labelUserName setTextColor:[UIColor blackColor]];
+        [labelUserName setBackgroundColor:[UIColor clearColor]];
+        [labelUserName setTextAlignment:UITextAlignmentLeft];
+        [labelUserName setShadowOffset:CGSizeMake(0, 1)];
+		[labelUserName setShadowColor:[UIColor whiteColor]];
+        [labelUserName setFont:[UIFont systemFontOfSize:19]];
+		[panelView addSubview:labelUserName];
+        
         
         sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
 		[sendButton setShowsTouchWhenHighlighted:YES];
@@ -198,6 +231,9 @@ static BOOL WBIsDeviceIPad()
 {
     [engine setDelegate:nil];
     [engine release], engine = nil;
+    
+//    [engine2 setDelegate:nil];
+//    [engine2 release],engine2 =nil;
     
     [panelView release], panelView = nil;
     [panelImageView release], panelImageView = nil;
@@ -697,5 +733,16 @@ static BOOL WBIsDeviceIPad()
         [delegate sendViewAuthorizeExpired:self];
     }
 }
+
+-(void)onLogoutButtonTouched:(id)sender{
+    [engine logOut];
+//    [engine2 logOut];
+    [delegate sendViewNotAuthorized:self];
+}
+
+-(void)nickNameGot:(GetNickName *)getNickName{
+    [labelUserName setText:[getNickName nickName]];
+}
+
 
 @end

@@ -8,11 +8,17 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "InfoViewController.h"
+#define kWBSDKDemoAppKey @"1638447496"
+#define kWBSDKDemoAppSecret @"4866007a20e88747b5ae101d6c796aaa"
+#define kWBAlertViewLogOutTag 100
+#define kWBAlertViewLogInTag  101
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+@synthesize weiBoEngine;
 
 - (void)viewDidLoad
 {
@@ -34,7 +40,16 @@
     scratchViewController =[[ScrachViewController alloc] initWithNibName:@"ScratchViewClear" bundle:nil];
     scratchView = scratchViewController.view;
     toolView = [[ToolViewController alloc] initWithNibName:@"ToolViewController" bundle:nil];
+    [toolView.view setCenter:CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-toolView.view.frame.size.height/2)];
     toolView.delegate = self;
+    WBEngine *engine = [[WBEngine alloc] initWithAppKey:kWBSDKDemoAppKey appSecret:kWBSDKDemoAppSecret];
+    [engine setRootViewController:self];
+    [engine setDelegate:self];
+    [engine setRedirectURI:@"http://"];
+    [engine setIsUserExclusive:NO];
+    self.weiBoEngine = engine;
+    [engine release];
+
 }
 
 
@@ -83,7 +98,9 @@
         [scratchViewController loadScratchPaperWithPath:@"scratch_it"];
         [scratchView setFrame:self.view.frame];
         [self.view addSubview:scratchView];
+        scratchView.center = CGPointMake(scratchView.center.x-5, scratchView.center.y+20);
         [self.view addSubview:toolView.view];
+        [self.view addSubview:buttonInfo];
 
         return result;
     }
@@ -103,7 +120,9 @@
         [scratchViewController setImageNamed:@"a.002.png"];
         [scratchView setFrame:self.view.frame];
         [self.view addSubview:scratchView];
+        scratchView.center = CGPointMake(scratchView.center.x-5, scratchView.center.y+20);
         [self.view addSubview:toolView.view];
+        [self.view addSubview:buttonInfo];
 
         return result;
     }
@@ -123,6 +142,151 @@
         return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(void)mailClicked{
+    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+    controller.mailComposeDelegate = self;
+    [controller setSubject:@"每日金句"];
+    
+    NSArray *bccRecipients = [NSArray arrayWithObject:@"wupeng_ios@foxmail.com"]; 
+    [controller setBccRecipients:bccRecipients];
+    
+    CGSize a= CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height-100);
+    UIGraphicsBeginImageContext(a);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *currentScreen = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    
+    NSData *imageData = UIImagePNGRepresentation(currentScreen);
+    [controller addAttachmentData:imageData mimeType:@"image/png" fileName:@"motto_today.png"];
+    
+    
+    [controller setMessageBody:@"今天我的金句是：" isHTML:YES];
+    
+    [self presentModalViewController:controller animated:YES];
+    
+    [controller release];
+}
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error{
+    if (result == MFMailComposeResultSent) {
+        [self showAlert:@"邮件已进入后台发送" withTitle:@"提醒"];
+    }
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+-(void)saveClicked{
+    CGSize a= CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height-100);
+    UIGraphicsBeginImageContext(a);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *currentScreen = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    UIImageWriteToSavedPhotosAlbum(currentScreen, self,nil,nil);
+    [self showAlert:@"已保存到相册" withTitle:@"已保存"];
+
+}
+-(void)weiboClicked{
+    if ([self.weiBoEngine isLoggedIn] && ![self.weiBoEngine isAuthorizeExpired]){
+        NSLog(@"a");
+        [self performSelector:@selector(onAuthedAndPrepareToSend) withObject:nil afterDelay:0.0];
+    }else {
+        NSLog(@"b");
+        [weiBoEngine logIn];
+
+    }
+}
+
+- (void)onAuthedAndPrepareToSend
+{
+    CGSize a= CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height-100);
+    UIGraphicsBeginImageContext(a);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *currentScreen = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    WBSendView *sendView = [[WBSendView alloc] initWithAppKey:kWBSDKDemoAppKey appSecret:kWBSDKDemoAppSecret text:@"我今天的金句是：" image:currentScreen];
+    [sendView setDelegate:self];
+    
+    [sendView show:YES];
+    [sendView release];
+}
+
+#pragma mark - WBSendViewDelegate Methods
+
+- (void)sendViewDidFinishSending:(WBSendView *)view
+{
+    [view hide:YES];
+    UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:nil 
+													   message:@"微博发送成功！" 
+													  delegate:nil
+											 cancelButtonTitle:@"确定" 
+											 otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
+}
+
+- (void)engineDidLogIn:(WBEngine *)engine
+{
+    [self performSelector:@selector(onAuthedAndPrepareToSend) withObject:nil afterDelay:0.0];
+}
+
+- (void)engine:(WBEngine *)engine didFailToLogInWithError:(NSError *)error
+{
+    NSLog(@"didFailToLogInWithError: %@", error);
+    UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:nil 
+													   message:@"登录失败！" 
+													  delegate:nil
+											 cancelButtonTitle:@"确定" 
+											 otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
+}
+
+
+- (void)sendView:(WBSendView *)view didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    [view hide:YES];
+    UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:nil 
+													   message:@"微博发送失败！" 
+													  delegate:nil
+											 cancelButtonTitle:@"确定" 
+											 otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
+}
+
+- (void)sendViewNotAuthorized:(WBSendView *)view
+{
+    [view hide:YES];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)sendViewAuthorizeExpired:(WBSendView *)view
+{
+    [view hide:YES];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+
+-(IBAction)infoClicked:(id)sender{
+    InfoViewController *infoViewController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [UIView beginAnimations:nil context:context];
+    [UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:1.0];
+    [self.navigationController pushViewController:infoViewController animated:NO];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+    
+    [UIView commitAnimations];
+
+    
+}
+-(void)showAlert:(NSString *)message withTitle:(NSString*)title{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alertView show];
+}
 
 
 @end
