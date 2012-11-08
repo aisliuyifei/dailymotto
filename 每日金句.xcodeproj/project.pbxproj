@@ -77,9 +77,7 @@
 		76AC6D6F1598592A00A8859A /* IAPHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC6D6E1598592A00A8859A /* IAPHandler.m */; };
 		76AC6DA11599B40E00A8859A /* GetNickName.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC6DA01599B40E00A8859A /* GetNickName.m */; };
 		76CFFB09158B3666003FF20B /* 迷你简启体.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 76CFFB08158B3666003FF20B /* 迷你简启体.TTF */; };
-		76CFFB0E158B367C003FF20B /* a.003.png in Resources */ = {isa = PBXBuildFile; fileRef = 76CFFB0B158B367C003FF20B /* a.003.png */; };
 		76CFFB0F158B367C003FF20B /* a.002.png in Resources */ = {isa = PBXBuildFile; fileRef = 76CFFB0C158B367C003FF20B /* a.002.png */; };
-		76CFFB10158B367C003FF20B /* 刮刮卡.png in Resources */ = {isa = PBXBuildFile; fileRef = 76CFFB0D158B367C003FF20B /* 刮刮卡.png */; };
 		76CFFB12158B3684003FF20B /* mottos_db in Resources */ = {isa = PBXBuildFile; fileRef = 76CFFB11158B3684003FF20B /* mottos_db */; };
 		76CFFB17158B368D003FF20B /* 空白导航栏@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76CFFB13158B368D003FF20B /* 空白导航栏@2x.png */; };
 		76CFFB18158B368D003FF20B /* 背景卡@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76CFFB14158B368D003FF20B /* 背景卡@2x.png */; };
@@ -188,10 +186,10 @@
 		76201D2E1591B0AD00D847B9 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		76201D2F1591B0AD00D847B9 /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
 		76201D3B1591B0F700D847B9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		76201D501591BA5200D847B9 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
-		76201D551591BA8700D847B9 /* weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weibo.png; sourceTree = "<group>"; };
-		76201D571591BBFD00D847B9 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
-		76201D5D1591BD1000D847B9 /* UI__高度为166像素的深灰底@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI__高度为166像素的深灰底@2x.png"; sourceTree = "<group>"; };
+		76201D501591BA5200D847B9 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = save.png; path = DailyMotto/save.png; sourceTree = "<group>"; };
+		76201D551591BA8700D847B9 /* weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weibo.png; path = DailyMotto/weibo.png; sourceTree = "<group>"; };
+		76201D571591BBFD00D847B9 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mail.png; path = DailyMotto/mail.png; sourceTree = "<group>"; };
+		76201D5D1591BD1000D847B9 /* UI__高度为166像素的深灰底@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UI__高度为166像素的深灰底@2x.png"; path = "DailyMotto/UI__高度为166像素的深灰底@2x.png"; sourceTree = "<group>"; };
 		76201D5F1591BF4B00D847B9 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		76201D601591BF4B00D847B9 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		76201D631591BF6500D847B9 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
@@ -225,10 +223,8 @@
 		76AC6D6E1598592A00A8859A /* IAPHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHandler.m; sourceTree = "<group>"; };
 		76AC6D9F1599B40E00A8859A /* GetNickName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetNickName.h; sourceTree = "<group>"; };
 		76AC6DA01599B40E00A8859A /* GetNickName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetNickName.m; sourceTree = "<group>"; };
-		76CFFB08158B3666003FF20B /* 迷你简启体.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "迷你简启体.TTF"; sourceTree = "<group>"; };
-		76CFFB0B158B367C003FF20B /* a.003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.003.png; sourceTree = "<group>"; };
-		76CFFB0C158B367C003FF20B /* a.002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.002.png; sourceTree = "<group>"; };
-		76CFFB0D158B367C003FF20B /* 刮刮卡.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "刮刮卡.png"; sourceTree = "<group>"; };
+		76CFFB08158B3666003FF20B /* 迷你简启体.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "迷你简启体.TTF"; path = "../迷你简启体.TTF"; sourceTree = "<group>"; };
+		76CFFB0C158B367C003FF20B /* a.002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = a.002.png; path = DailyMotto/a.002.png; sourceTree = "<group>"; };
 		76CFFB11158B3684003FF20B /* mottos_db */ = {isa = PBXFileReference; lastKnownFileType = file; path = mottos_db; sourceTree = "<group>"; };
 		76CFFB13158B368D003FF20B /* 空白导航栏@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空白导航栏@2x.png"; sourceTree = "<group>"; };
 		76CFFB14158B368D003FF20B /* 背景卡@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景卡@2x.png"; sourceTree = "<group>"; };
@@ -241,8 +237,8 @@
 		76D38CE81593125D00B8F73E /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		76D38CEB1593177900B8F73E /* UI__webview区域.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI__webview区域.png"; sourceTree = "<group>"; };
 		76D38CEC1593177900B8F73E /* UI__webview区域@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI__webview区域@2x.png"; sourceTree = "<group>"; };
-		76D38CEF1593184E00B8F73E /* login-xuntouched.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-xuntouched.png"; sourceTree = "<group>"; };
-		76D38CF01593184E00B8F73E /* login-xuntouched@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-xuntouched@2x.png"; sourceTree = "<group>"; };
+		76D38CEF1593184E00B8F73E /* login-xuntouched.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-xuntouched.png"; path = "DailyMotto/GoogleAdMobAdsSDK/login-xuntouched.png"; sourceTree = "<group>"; };
+		76D38CF01593184E00B8F73E /* login-xuntouched@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-xuntouched@2x.png"; path = "DailyMotto/GoogleAdMobAdsSDK/login-xuntouched@2x.png"; sourceTree = "<group>"; };
 		76D38CF315931C8200B8F73E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		76D38DA715931DE100B8F73E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		76D38DAF1593206100B8F73E /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -287,24 +283,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		760D8D7F158B33F700BCCFB1 = {
+		182E4D28164B9ED300805973 /* pics */ = {
 			isa = PBXGroup;
 			children = (
-				76D38DAD1593200200B8F73E /* ECPurchase */,
-				765FBB931591C6160005A2D3 /* Default@2x.png */,
-				765FBB911591C60C0005A2D3 /* Default.png */,
-				765FBB8F1591C6060005A2D3 /* Icon@2x.png */,
-				765FBB8D1591C6030005A2D3 /* Icon.png */,
-				76201CE31591A3BE00D847B9 /* weibo */,
-				76CFFB21158B38D6003FF20B /* MessageUI.framework */,
-				760D8DCB158B358200BCCFB1 /* libsqlite3.dylib */,
-				76D38CEB1593177900B8F73E /* UI__webview区域.png */,
-				76D38CEC1593177900B8F73E /* UI__webview区域@2x.png */,
-				76CFFB08158B3666003FF20B /* 迷你简启体.TTF */,
+				76201D5D1591BD1000D847B9 /* UI__高度为166像素的深灰底@2x.png */,
+				76201D551591BA8700D847B9 /* weibo.png */,
+				76201D571591BBFD00D847B9 /* mail.png */,
+				76201D501591BA5200D847B9 /* save.png */,
+				76D38CEF1593184E00B8F73E /* login-xuntouched.png */,
+				76D38CF01593184E00B8F73E /* login-xuntouched@2x.png */,
 				76CFFB13158B368D003FF20B /* 空白导航栏@2x.png */,
 				76CFFB14158B368D003FF20B /* 背景卡@2x.png */,
 				76CFFB15158B368D003FF20B /* 空白导航栏.png */,
 				76CFFB16158B368D003FF20B /* 背景卡.png */,
+				76D38CEB1593177900B8F73E /* UI__webview区域.png */,
+				76D38CEC1593177900B8F73E /* UI__webview区域@2x.png */,
+				76CFFB0C158B367C003FF20B /* a.002.png */,
+			);
+			name = pics;
+			sourceTree = "<group>";
+		};
+		760D8D7F158B33F700BCCFB1 = {
+			isa = PBXGroup;
+			children = (
+				765FBB931591C6160005A2D3 /* Default@2x.png */,
+				765FBB911591C60C0005A2D3 /* Default.png */,
+				765FBB8F1591C6060005A2D3 /* Icon@2x.png */,
+				765FBB8D1591C6030005A2D3 /* Icon.png */,
+				182E4D28164B9ED300805973 /* pics */,
+				76D38DAD1593200200B8F73E /* ECPurchase */,
+				76201CE31591A3BE00D847B9 /* weibo */,
 				760D8D94158B33F700BCCFB1 /* DailyMotto */,
 				760D8D8D158B33F700BCCFB1 /* Frameworks */,
 				760D8D8B158B33F700BCCFB1 /* Products */,
@@ -322,6 +330,8 @@
 		760D8D8D158B33F700BCCFB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76CFFB21158B38D6003FF20B /* MessageUI.framework */,
+				760D8DCB158B358200BCCFB1 /* libsqlite3.dylib */,
 				76D38DA715931DE100B8F73E /* libz.1.2.5.dylib */,
 				76D38CF315931C8200B8F73E /* StoreKit.framework */,
 				76201D851591C2F700D847B9 /* SystemConfiguration.framework */,
@@ -342,28 +352,26 @@
 			isa = PBXGroup;
 			children = (
 				76201D621591BF6500D847B9 /* GoogleAdMobAdsSDK */,
-				76201D551591BA8700D847B9 /* weibo.png */,
-				76201D5F1591BF4B00D847B9 /* AddViewController.h */,
-				76201D601591BF4B00D847B9 /* AddViewController.m */,
-				76201D5D1591BD1000D847B9 /* UI__高度为166像素的深灰底@2x.png */,
-				76201D571591BBFD00D847B9 /* mail.png */,
-				76201D501591BA5200D847B9 /* save.png */,
-				76CFFB11158B3684003FF20B /* mottos_db */,
-				76CFFB0B158B367C003FF20B /* a.003.png */,
-				76CFFB0C158B367C003FF20B /* a.002.png */,
-				76CFFB0D158B367C003FF20B /* 刮刮卡.png */,
 				760D8DA8158B351F00BCCFB1 /* lib */,
+				760D8D9D158B33F700BCCFB1 /* AppDelegate.h */,
+				760D8D9E158B33F700BCCFB1 /* AppDelegate.m */,
 				760D8DA5158B34F500BCCFB1 /* ViewController.h */,
 				760D8DA6158B34F500BCCFB1 /* ViewController.m */,
 				76CFFB1B158B36F7003FF20B /* ViewController_iPhone.xib */,
-				760D8D9D158B33F700BCCFB1 /* AppDelegate.h */,
-				760D8D9E158B33F700BCCFB1 /* AppDelegate.m */,
-				760D8D95158B33F700BCCFB1 /* Supporting Files */,
+				760D8DC6158B357200BCCFB1 /* ToolViewController.h */,
+				760D8DC7158B357200BCCFB1 /* ToolViewController.m */,
+				760D8DC8158B357200BCCFB1 /* ToolViewController.xib */,
+				76201D5F1591BF4B00D847B9 /* AddViewController.h */,
+				76201D601591BF4B00D847B9 /* AddViewController.m */,
 				76D38CE61593125D00B8F73E /* InfoViewController.h */,
 				76D38CE71593125D00B8F73E /* InfoViewController.m */,
-				76AC6D6D1598592A00A8859A /* IAPHandler.h */,
-				76AC6D6E1598592A00A8859A /* IAPHandler.m */,
 				76D38CE81593125D00B8F73E /* InfoViewController.xib */,
+				760D8DC0158B354B00BCCFB1 /* TouchRecord.h */,
+				760D8DC1158B354B00BCCFB1 /* TouchRecord.m */,
+				760D8DBB158B353A00BCCFB1 /* ScrachViewController.h */,
+				760D8DBC158B353A00BCCFB1 /* ScrachViewController.m */,
+				760D8DBD158B353A00BCCFB1 /* ScratchViewClear.xib */,
+				760D8D95158B33F700BCCFB1 /* Supporting Files */,
 			);
 			path = DailyMotto;
 			sourceTree = "<group>";
@@ -371,6 +379,8 @@
 		760D8D95158B33F700BCCFB1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				76CFFB11158B3684003FF20B /* mottos_db */,
+				76CFFB08158B3666003FF20B /* 迷你简启体.TTF */,
 				760D8D96158B33F700BCCFB1 /* 每日金句-Info.plist */,
 				760D8D9A158B33F700BCCFB1 /* main.m */,
 				760D8D9C158B33F700BCCFB1 /* 每日金句-Prefix.pch */,
@@ -381,16 +391,10 @@
 		760D8DA8158B351F00BCCFB1 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				760D8DC6158B357200BCCFB1 /* ToolViewController.h */,
-				760D8DC7158B357200BCCFB1 /* ToolViewController.m */,
-				760D8DC8158B357200BCCFB1 /* ToolViewController.xib */,
+				76AC6D6D1598592A00A8859A /* IAPHandler.h */,
+				76AC6D6E1598592A00A8859A /* IAPHandler.m */,
 				760D8DC3158B356000BCCFB1 /* ImageSaverAndLoader.h */,
 				760D8DC4158B356000BCCFB1 /* ImageSaverAndLoader.m */,
-				760D8DC0158B354B00BCCFB1 /* TouchRecord.h */,
-				760D8DC1158B354B00BCCFB1 /* TouchRecord.m */,
-				760D8DBB158B353A00BCCFB1 /* ScrachViewController.h */,
-				760D8DBC158B353A00BCCFB1 /* ScrachViewController.m */,
-				760D8DBD158B353A00BCCFB1 /* ScratchViewClear.xib */,
 				760D8DA9158B352900BCCFB1 /* FMDatabase.m */,
 				760D8DAA158B352900BCCFB1 /* FMDatabase.h */,
 				760D8DAB158B352900BCCFB1 /* FMDatabaseAdditions.h */,
@@ -475,8 +479,6 @@
 		76201D621591BF6500D847B9 /* GoogleAdMobAdsSDK */ = {
 			isa = PBXGroup;
 			children = (
-				76D38CEF1593184E00B8F73E /* login-xuntouched.png */,
-				76D38CF01593184E00B8F73E /* login-xuntouched@2x.png */,
 				76201D631591BF6500D847B9 /* GADAdMobExtras.h */,
 				76201D641591BF6500D847B9 /* GADAdNetworkExtras.h */,
 				76201D651591BF6500D847B9 /* GADAdSize.h */,
@@ -591,9 +593,7 @@
 				760D8DBF158B353A00BCCFB1 /* ScratchViewClear.xib in Resources */,
 				760D8DCA158B357200BCCFB1 /* ToolViewController.xib in Resources */,
 				76CFFB09158B3666003FF20B /* 迷你简启体.TTF in Resources */,
-				76CFFB0E158B367C003FF20B /* a.003.png in Resources */,
 				76CFFB0F158B367C003FF20B /* a.002.png in Resources */,
-				76CFFB10158B367C003FF20B /* 刮刮卡.png in Resources */,
 				76CFFB12158B3684003FF20B /* mottos_db in Resources */,
 				76CFFB17158B368D003FF20B /* 空白导航栏@2x.png in Resources */,
 				76CFFB18158B368D003FF20B /* 背景卡@2x.png in Resources */,
