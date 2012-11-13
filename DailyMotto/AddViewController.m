@@ -26,19 +26,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    bannerView = [[ADBannerView alloc]init];
-    bannerView.delegate=self;
+//    bannerView = [[ADBannerView alloc]init];
+//    bannerView.delegate=self;
+    [self addAdMobBanner];
     [bannerView setHidden:YES];
 
     // Do any additional setup after loading the view from its nib.
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [self.view addSubview:bannerView];
-    [self.view bringSubviewToFront:bannerView];
-    if ([bannerView isHidden]) {
+//    [self.view addSubview:bannerView];
+//    [self.view bringSubviewToFront:bannerView];
+//    if ([bannerView isHidden]) {
         [self.view bringSubviewToFront:gAdBannerView];
-    }
+//    }
     [super viewWillAppear:animated];
 }
 - (void)viewDidUnload
