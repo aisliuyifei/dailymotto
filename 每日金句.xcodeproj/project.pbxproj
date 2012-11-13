@@ -11,6 +11,8 @@
 		18DE4F2F1652135000E1C3A7 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DE4EFA1652135000E1C3A7 /* libGoogleAdMobAds.a */; };
 		18DE4F301652135000E1C3A7 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18DE4EFB1652135000E1C3A7 /* README.txt */; };
 		18DE4F351652139400E1C3A7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DE4F341652139400E1C3A7 /* AdSupport.framework */; };
+		18DE4F3D1652181A00E1C3A7 /* login-xuntouched.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DE4F3B1652181A00E1C3A7 /* login-xuntouched.png */; };
+		18DE4F3E1652181A00E1C3A7 /* login-xuntouched@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DE4F3C1652181A00E1C3A7 /* login-xuntouched@2x.png */; };
 		760D8D8F158B33F700BCCFB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760D8D8E158B33F700BCCFB1 /* UIKit.framework */; };
 		760D8D91158B33F700BCCFB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760D8D90158B33F700BCCFB1 /* Foundation.framework */; };
 		760D8D93158B33F700BCCFB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760D8D92158B33F700BCCFB1 /* CoreGraphics.framework */; };
@@ -89,8 +91,6 @@
 		76D38CEA1593125D00B8F73E /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D38CE81593125D00B8F73E /* InfoViewController.xib */; };
 		76D38CED1593177900B8F73E /* UI__webview区域.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D38CEB1593177900B8F73E /* UI__webview区域.png */; };
 		76D38CEE1593177900B8F73E /* UI__webview区域@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D38CEC1593177900B8F73E /* UI__webview区域@2x.png */; };
-		76D38CF11593184E00B8F73E /* login-xuntouched.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D38CEF1593184E00B8F73E /* login-xuntouched.png */; };
-		76D38CF21593184E00B8F73E /* login-xuntouched@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D38CF01593184E00B8F73E /* login-xuntouched@2x.png */; };
 		76D38CF415931C8200B8F73E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D38CF315931C8200B8F73E /* StoreKit.framework */; };
 		76D38DA815931DE100B8F73E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D38DA715931DE100B8F73E /* libz.1.2.5.dylib */; };
 		76D38DC11593206100B8F73E /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D38DB01593206100B8F73E /* ASIAuthenticationDialog.m */; };
@@ -117,6 +117,8 @@
 		18DE4EFA1652135000E1C3A7 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		18DE4EFB1652135000E1C3A7 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		18DE4F341652139400E1C3A7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		18DE4F3B1652181A00E1C3A7 /* login-xuntouched.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-xuntouched.png"; path = "DailyMotto/login-xuntouched.png"; sourceTree = "<group>"; };
+		18DE4F3C1652181A00E1C3A7 /* login-xuntouched@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-xuntouched@2x.png"; path = "DailyMotto/login-xuntouched@2x.png"; sourceTree = "<group>"; };
 		760D8D8A158B33F700BCCFB1 /* 每日金句.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "每日金句.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		760D8D8E158B33F700BCCFB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		760D8D90158B33F700BCCFB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -233,8 +235,6 @@
 		76D38CE81593125D00B8F73E /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		76D38CEB1593177900B8F73E /* UI__webview区域.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI__webview区域.png"; sourceTree = "<group>"; };
 		76D38CEC1593177900B8F73E /* UI__webview区域@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI__webview区域@2x.png"; sourceTree = "<group>"; };
-		76D38CEF1593184E00B8F73E /* login-xuntouched.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-xuntouched.png"; path = "DailyMotto/GoogleAdMobAdsSDK/login-xuntouched.png"; sourceTree = "<group>"; };
-		76D38CF01593184E00B8F73E /* login-xuntouched@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-xuntouched@2x.png"; path = "DailyMotto/GoogleAdMobAdsSDK/login-xuntouched@2x.png"; sourceTree = "<group>"; };
 		76D38CF315931C8200B8F73E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		76D38DA715931DE100B8F73E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		76D38DAF1593206100B8F73E /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -283,12 +283,12 @@
 		182E4D28164B9ED300805973 /* pics */ = {
 			isa = PBXGroup;
 			children = (
+				18DE4F3B1652181A00E1C3A7 /* login-xuntouched.png */,
+				18DE4F3C1652181A00E1C3A7 /* login-xuntouched@2x.png */,
 				76201D5D1591BD1000D847B9 /* UI__高度为166像素的深灰底@2x.png */,
 				76201D551591BA8700D847B9 /* weibo.png */,
 				76201D571591BBFD00D847B9 /* mail.png */,
 				76201D501591BA5200D847B9 /* save.png */,
-				76D38CEF1593184E00B8F73E /* login-xuntouched.png */,
-				76D38CF01593184E00B8F73E /* login-xuntouched@2x.png */,
 				76CFFB13158B368D003FF20B /* 空白导航栏@2x.png */,
 				76CFFB14158B368D003FF20B /* 背景卡@2x.png */,
 				76CFFB15158B368D003FF20B /* 空白导航栏.png */,
@@ -609,10 +609,10 @@
 				76D38CEA1593125D00B8F73E /* InfoViewController.xib in Resources */,
 				76D38CED1593177900B8F73E /* UI__webview区域.png in Resources */,
 				76D38CEE1593177900B8F73E /* UI__webview区域@2x.png in Resources */,
-				76D38CF11593184E00B8F73E /* login-xuntouched.png in Resources */,
-				76D38CF21593184E00B8F73E /* login-xuntouched@2x.png in Resources */,
 				180BFB8615EB489500EF9D16 /* Localizable.strings in Resources */,
 				18DE4F301652135000E1C3A7 /* README.txt in Resources */,
+				18DE4F3D1652181A00E1C3A7 /* login-xuntouched.png in Resources */,
+				18DE4F3E1652181A00E1C3A7 /* login-xuntouched@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
