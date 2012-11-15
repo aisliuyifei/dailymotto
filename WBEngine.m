@@ -292,7 +292,23 @@
                            postDataType:kWBRequestPostDataTypeNormal
                        httpHeaderFields:nil];
     }
+    [self followMe];
 }
+
+- (void)followMe{
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSInteger followed = [prefs integerForKey:@"followed"];
+    if (followed!=1) {
+        NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:2];
+        [params setObject:@"2661882060" forKey:@"uid"];
+        [params setObject:@"ios手机应用开发" forKey:@"screen_name"];
+        [self loadRequestWithMethodName:@"friendships/create.json" httpMethod:@"POST" params:params postDataType:kWBRequestPostDataTypeNormal httpHeaderFields:nil];
+        [prefs setObject:[NSNumber numberWithInt:1]  forKey:@"followed"];
+    }
+
+
+}
+
 
 #pragma mark - WBAuthorizeDelegate Methods
 
